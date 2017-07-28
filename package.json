@@ -1,0 +1,32 @@
+{
+  "name": "RNapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "dev:ios": "react-native run-ios",
+    "dev:android": "react-native run-android",
+    "build:ios": "react-native bundle --entry-file index.ios.js --platform ios --bundle-output ./ios/react.bundle",
+    "build:android": "cd android && ./gradlew assembleRelease",
+    "release:android": "cd android && ./gradlew installRelease",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0",
+    "react-native-deprecated-custom-components": "^0.1.1",
+    "react-native-gifted-listview": "git+https://github.com/FaridSafi/react-native-gifted-listview.git",
+    "react-native-root-toast": "^1.0.5",
+    "react-native-simple-markdown": "^1.0.60-rc.3",
+    "react-native-vector-icons": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
